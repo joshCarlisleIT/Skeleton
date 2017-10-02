@@ -1,4 +1,4 @@
-# skeleton #
+# Skeleton #
 
 Skeleton is a login and register system. Built using [lazy-boy], utilising [Silex], [Syringe]  
 
