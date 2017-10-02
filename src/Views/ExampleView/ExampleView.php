@@ -1,0 +1,1 @@
+<h1>Hello world I am a base view which is where html is written</h1>

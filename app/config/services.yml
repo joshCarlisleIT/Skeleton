@@ -55,3 +55,8 @@ services:
       - "%dbConn%"
       - "%dbName%"
       - "%dbPass%"
+
+  ExampleController:
+    class: IngeniousWeb\Skeleton\Controllers\ExampleController
+    arguements:
+      #- "@baseController"
