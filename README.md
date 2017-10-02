@@ -8,7 +8,7 @@ Skeleton will create a lazy-boy framework, with added utilities to allow for a u
 
 Skeleton is configured to use lazy-boy route loader syringe, which defines services and routes in config files using YAML instead of PHP.
 
-Skeleton doesn't come with a frontend this allows you to create your own site to work with Skeleton. There is a recommended format outlined below
+Skeleton doesn't come with a frontend this allows you to create your own site to work with Skeleton. There is a recommended format outlined below.
 
 ## How do I get set up?
 
