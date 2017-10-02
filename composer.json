@@ -1,0 +1,5 @@
+{
+    "require": {
+        "silktide/lazy-boy": "^2.0"
+    }
+}

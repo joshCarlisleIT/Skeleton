@@ -1,0 +1,20 @@
+{
+  "services": {
+    "privateService": {
+      "class": "Silktide\\Syringe\\IntegrationTests\\Service\\DudService",
+      "private": true
+    },
+    "usesPrivateService": {
+      "class": "Silktide\\Syringe\\IntegrationTests\\Service\\DudConsumer",
+      "arguments": [
+        "@privateAlias"
+      ]
+    },
+    "privateAlias": {
+      "aliasOf": "@privateService"
+    },
+    "publicAlias": {
+      "aliasOf": "@usesPrivateService"
+    }
+  }
+}

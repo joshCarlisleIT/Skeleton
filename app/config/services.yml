@@ -1,0 +1,57 @@
+parameters:
+  securityContainer.defaultSecurity:
+    public: true
+
+  debug: false
+
+  dbConn: #"mysql:host=YOUR HOST; dbname=YOUR DATABASE"
+  dbName: #"YOUR USER NAME"
+  dbPass: #"YOUR DB PASSWORD"
+
+services:
+  routeLoader:
+    class: Silktide\LazyBoy\Config\RouteLoader
+    arguments:
+      - "@app"
+      - "@securityContainer"
+      -
+        - "@yaml.loader"
+        - "@json.loader"
+
+  securityContainer:
+    class: Silktide\LazyBoy\Security\SecurityContainer
+    arguments:
+      - "%securityContainer.defaultSecurity%"
+
+  yaml.loader:
+    class: Silktide\Syringe\Loader\YamlLoader
+
+  json.loader:
+    class: Silktide\Syringe\Loader\JsonLoader
+
+  baseController:
+    class: IngeniousWeb\Skeleton\Core\BaseController
+      arguments:
+        #- "@user"
+
+  user:
+    class: IngeniousWeb\Skeleton\Services\System\User
+    arguments:
+      - "@userModel"
+      - "@hash"
+  
+  hash:
+    class: IngeniousWeb\Skeleton\Services\Utils\Hash
+    arguments:
+
+  userModel:
+    class: IngeniousWeb\Skeleton\Models\UserModel
+    arguments:
+      - "@DB"
+
+  DB:
+    class: IngeniousWeb\Skeleton\Services\Storage\DB
+    arguments:
+      - "%dbConn%"
+      - "%dbName%"
+      - "%dbPass%"
