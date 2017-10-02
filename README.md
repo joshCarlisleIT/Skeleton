@@ -25,8 +25,13 @@ Skeleton is configured to use lazy-boy route loader syringe, which defines servi
 * Changes must be clearly defined with either `<!-- START OF CODE CHANGE -->` or `/* START OF CODE CHANGE */`
 * Changes must be clearly ended with either `<!-- END OF CODE CHANGE -->` or `/* END OF CODE CHANGE */`
 * Code can be re-written, reviewed and commented accordingly
-* All PHP must be strictly written in PSR-2 formatting and commneted accordingly
+* All PHP must be strictly written in [PSR-2] formatting and commneted accordingly
 * All dependencies must be correctly namespaced and written accordingly to the PSR-4 standard
 
 ### Who do I talk to?
 * Josh Carlisle
+
+[Silex]: https://github.com/silexphp/silex
+[Syringe]: https://github.com/silktide/syringe
+[lazy-boy]: https://github.com/silktide/lazy-boy
+[PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
