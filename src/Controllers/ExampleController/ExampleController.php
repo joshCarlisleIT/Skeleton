@@ -8,23 +8,18 @@ class ExampleController extends BaseController
 	/**
 	 * @var $base
 	 */
-	//public $base;
+	public $base;
 
 	/**
 	 * @param Base $base
 	 */
-	public function __construct(/*Base $base*/)
+	public function __construct(Base $base)
 	{
-		//$this->base = $base;
+		$this->base = $base;
 	}
 
-	public function title($class)
+	public function index()
 	{
-		return get_class($class);
-	}
-
-	public function view($view, $title, $user, $data = [], $token)
-	{
-		require_once '../web/templates/template.php';
+		$this->base->view('ExampleView/ExampleView.php', $title = null, $user = null, $data = null, $token = null);
 	}
 }
